@@ -2,12 +2,11 @@
 
 FROM ghcr.io/linuxserver/baseimage-ubuntu:jammy
 
-# set version label
+
 ARG BUILD_DATE
-ARG VERSION
 ARG UNIFI_VERSION
-LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
-LABEL maintainer="thespad"
+LABEL build_version="Unifi Controller version:- ${UNIFI_VERSION} Build-date:- ${BUILD_DATE}"
+LABEL maintainer="Adriano Antonucci"
 
 # environment settings
 ARG UNIFI_BRANCH="stable"
