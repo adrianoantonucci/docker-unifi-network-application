@@ -22,7 +22,7 @@ jobs:
       - name: Read Unifi version from file
         id: read_version
         run: echo "UNIFI_VERSION=$(cat version.txt)" >> $GITHUB_ENV
-        
+
       - name: Get current date and time
         id: get_date
         run: echo "BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> $GITHUB_ENV
@@ -38,6 +38,7 @@ jobs:
         with:
           context: .
           push: true
+          platforms: linux/amd64,linux/arm64
           tags: |
             ${{ env.DOCKER_IMAGE }}:${{ env.UNIFI_VERSION }}
             ${{ env.DOCKER_IMAGE }}:latest
