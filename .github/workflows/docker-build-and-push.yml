@@ -11,8 +11,6 @@ jobs:
 
     env:
       DOCKER_IMAGE: adrianoantonucci/unifi-network-application
-      UNIFI_VERSION: "5.12.72"
-      OTHER_ARG: "example"
 
     steps:
       - name: Checkout repository
